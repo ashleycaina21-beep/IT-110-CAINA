@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Practical Application Activity</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>HTML Practical Application Activity</h1>
+        <p>Images, Hyperlinks, Multimedia, Useful Tags, and the HTML DOM</p>
+    </header>
+
+    <nav>
+        <a href="#images">Images</a> |
+        <a href="#hyperlinks">Hyperlinks</a> |
+        <a href="#multimedia">Multimedia</a> |
+        <a href="#useful-tags">Useful Tags</a> |
+        <a href="#dom">HTML DOM</a>
+    </nav>
+
+    <hr>
+
+    <!-- ==================== 1. IMAGES ==================== -->
+    <section id="images">
+        <h2>1. Images</h2>
+
+        <p>Images can be added to an HTML page using the image tag.</p>
+
+        <img src="images/image1.jpg"
+     alt="Decorated indoor space with plants, lamps, and shelves"
+     width="400"
+     height="533">
+
+<br><br>
+
+<img src="images/image2.jpg"
+     alt="Cozy room with a sofa, floor lamp, and wall shelf"
+      width="400">
+      
+
+<figure>
+    <img src="images/image3.jpg"
+         alt="Green rice field beside a road with coconut trees"
+         width="400">
+    <figcaption>Figure 1. A green field and countryside view.</figcaption>
+</figure>
+    </section>
+
+    <hr>
+
+    <!-- ==================== 2. HYPERLINKS ==================== -->
+    <section id="hyperlinks">
+        <h2>2. Hyperlinks</h2>
+
+        <h3>Internal Link</h3>
+        <p>
+            <a href="#multimedia">Go to the Multimedia section</a>
+        </p>
+
+        <h3>External Link</h3>
+        <p>
+            <a href="https://www.w3schools.com/"
+               target="_blank">
+                Visit W3Schools
+            </a>
+        </p>
+
+        <h3>Email Link</h3>
+        <p>
+            <a href="mailto:example@email.com">
+                Send me an email
+            </a>
+        </p>
+
+        <h3>Same-Page Anchor</h3>
+        <p>
+            <a href="#dom">Jump to HTML DOM</a>
+        </p>
+    </section>
+
+    <hr>
+
+    <!-- ==================== 3. MULTIMEDIA ==================== -->
+    <section id="multimedia">
+        <h2>3. Multimedia</h2>
+
+        <h3>Audio</h3>
+
+        <audio controls>
+    <source src="media/activity/audio.wav" type="audio/wav">
+    Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video</h3>
+
+        <video controls width="500">
+    <source src="media/activity/video.mp4" type="video/mp4">
+    Your browser does not support the video element.
+        </video>
+    </section>
+
+    <hr>
+
+    <!-- ==================== 4. USEFUL TAGS ==================== -->
+    <section id="useful-tags">
+        <h2>4. Useful Tags</h2>
+
+        <!-- I chose blockquote to show a quotation in a separate block. -->
+        <blockquote>
+            Learning HTML is an important step in learning web development.
+        </blockquote>
+
+        <!-- I chose abbr to show the meaning of an abbreviation. -->
+        <p>
+            <abbr title="HyperText Markup Language">HTML</abbr>
+            is used to structure web pages.
+        </p>
+
+        <!-- I chose mark to highlight important text. -->
+        <p>
+            HTML is <mark>important</mark> for web development.
+        </p>
+
+        <!-- I chose code to display a small piece of computer code. -->
+        <p>
+            Example: <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>
+        </p>
+    </section>
+
+    <hr>
+
+    <!-- ==================== 5. HTML DOM ==================== -->
+<section id="dom">
+    <h2>5. HTML DOM</h2>
+
+    <p id="dom-description">
+        The HTML DOM represents an HTML document as a tree of elements.
+    </p>
+
+    <div id="dom-example">
+        <h3>DOM Example</h3>
+
+        <div>
+            <p>
+                This paragraph is inside a div element.
+            </p>
+
+            <p>
+                The div is the parent, while the paragraphs are child elements.
+            </p>
+        </div>
+    </div>
+
+    <p>
+        Inspect this page using your browser's Developer Tools to view
+        the DOM tree.
+    </p>
+</section>
+    <hr>
+
+    <footer>
+        <p>IT-110 HTML Practical Application Activity</p>
+    </footer>
+
+    <!--
+    The HTML DOM has a parent-child relationship between elements.
+    The body element is a parent of the section elements.
+    The section with the id "dom" is a parent of the paragraph and div elements inside it.
+    The div with the id "dom-example" is the parent of its paragraph element.
+    -->
+
+</body>
+</html>
