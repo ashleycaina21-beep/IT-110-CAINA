@@ -1,0 +1,233 @@
+
+/* ==========================================
+   PART A: CSS FUNDAMENTALS
+   ========================================== */
+
+/* Reset: Tangtangon nato ang default margin ug
+   padding para consistent ang spacing sa webpage. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main style sa tibuok webpage */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFBE6;
+    color: #3D3520;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Grouping selector: Parehas og basic style ang h1 ug h2 */
+h1, h2 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* First rule para sa main heading */
+h1 {
+    font-size: 2rem;
+    color: #6B5418;
+}
+
+/* Cascade example:
+   Ang second h1 rule ang mo-win sa conflicting properties
+   kay parehas ra og specificity pero mas ulahi kini. */
+h1 {
+    color: #3D3520;
+    text-align: center;
+}
+
+
+/* ==========================================
+   PART B: SELECTORS AND STYLING
+   ========================================== */
+
+/* Header design */
+header {
+    background-color: #F5E7A1;
+    color: #3D3520;
+    text-align: center;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+/* Navigation spacing */
+nav {
+    margin-top: 12px;
+}
+
+/* Navigation links */
+nav a {
+    display: inline-block;
+    background-color: #FFFDF5;
+    color: #6B5418;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 4px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Pseudo-class: Mausab ang color kung i-hover ang link */
+nav a:hover {
+    background-color: #FFF0A8;
+    color: #5C460D;
+}
+
+/* Descendant selector: I-style ang paragraphs sulod sa card */
+.card p {
+    margin-bottom: 12px;
+}
+
+/* Class selector: Introduction paragraph */
+.intro {
+    color: #8A6D1D;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* ID selector: Lahi ang border sa About card */
+#about {
+    position: relative;
+    border-color: #D4B84C;
+}
+
+/* Pseudo-element: Magbutang og PROFILE badge
+   sa upper-right corner sa About card */
+#about::after {
+    content: "PROFILE";
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background-color: #FFF0A8;
+    color: #6B5418;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* Child selector: Direct li children ra sa skills-list
+   ang maapektuhan ani nga style */
+.skills-list > li {
+    list-style: none;
+    background-color: #FFF4BF;
+    color: #6B5418;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   PART C: BOX MODEL AND BASIC LAYOUT
+   ========================================== */
+
+/* Design sa profile cards */
+.card {
+    width: 500px;
+    max-width: 90%;
+    background-color: #FFFDF5;
+    padding: 24px;
+    border: 2px solid #E6D58A;
+    border-radius: 12px;
+    margin: 0 auto 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/*
+Card width calculation gamit ang border-box:
+500px total = 448px content + 48px padding + 4px border.
+Ang padding ug border apil na sa total width nga 500px.
+Ang margin naa sa gawas sa card ug dili apil sa width.
+*/
+
+
+/* ==========================================
+   PART D: DISPLAY AND VISIBILITY
+   ========================================== */
+
+/* Flexbox: I-arrange ang skills tags sa usa ka row
+   ug butangan og space sa tunga-tunga nila */
+.skills-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+/* Gitago ang paragraph ug mawala pud ang iyang space */
+.hide-none {
+    display: none;
+}
+
+/* Gitago ang paragraph pero nagpabilin ang iyang space */
+.hide-visibility {
+    visibility: hidden;
+}
+
+/*
+Difference:
+Ang display: none kay mawala ang element ug space.
+Ang visibility: hidden kay dili makita ang element
+pero nagpabilin ang space nga iyang gi-occupy.
+*/
+
+/* Hobbies card: Naay fixed height ug scrolling
+   kung sobra ang content sa sulod sa box */
+.scroll-box {
+    height: 180px;
+    overflow: auto;
+}
+
+/* Footer design */
+footer {
+    background-color: #F5E7A1;
+    color: #3D3520;
+    text-align: center;
+    padding: 16px;
+}
+
+/* Tangtangon ang extra bottom margin sa footer paragraph */
+footer p {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   REFLECTION QUESTIONS
+   ========================================== */
+
+/*
+1. Why did one of your two conflicting rules win in Part A?
+
+Ang second h1 rule ang ni-win kay parehas ra og
+specificity ang duha ka rules, pero ang second rule
+ang mas ulahi nakasulat sa CSS file. Mao nang siya
+ang gi-follow sa browser para sa conflicting property.
+
+
+2. What is the rendered width of one .card if box-sizing
+were content-box instead of border-box? Show your computation.
+
+Kung content-box ang gamiton, mahimong 552px ang total
+width sa card kay ang padding ug border idugang sa
+500px nga content width.
+
+Computation:
+500px + 48px padding + 4px border = 552px.
+
+
+3. When would you choose visibility: hidden instead of
+display: none?
+
+Gamiton nako ang visibility: hidden kung gusto nako
+itago ang usa ka element pero dili mausab ang space
+nga iyang gi-occupy sa webpage. Pananglitan, gusto
+nako nga magpabilin ang layout sa same position
+bisan dili makita ang element.
+*/
